@@ -1,0 +1,23 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "Playgroundp project to test funcionalities",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:modulus": "yarn workspace @playground/modulus-lib build",
+    "build:prime": "yarn workspace @playground/prime-numbers-lib build",
+    "build:home": "yarn workspace @playground/homepage-react build",
+    "build:libs": "yarn run build:modulus ",
+    "dev": " rm packages/homepage-react/node_modules -rf && yarn workspace @playground/homepage-react dev --host --force"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}

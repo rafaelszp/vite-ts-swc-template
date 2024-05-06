@@ -1,0 +1,26 @@
+{
+  "name": "@playground/modulus-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src/index.js",
+  "module": "dist/src/index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm dist -rf && tsc --emitDeclarationOnly -d && swc src --out-dir dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "exports": {
+    ".":{
+      "types": "./dist/src/index.js",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.3.12",
+    "@swc/core": "^1.4.17",
+    "typescript": "^5.4.5"
+  }
+}
